@@ -1,0 +1,24 @@
+<div class="card mb-5 mb-lg-0">
+    <div class="card-body">
+      <h5 class="card-title text-muted text-uppercase text-center">{{myData.title}}</h5>
+      <h6 class="card-price text-center">{{myData.price}}<span class="period">/month</span></h6>
+      <hr>
+      <ul class="fa-ul">
+        <li><span class="fa-li"><i class="fas fa-check"></i></span>{{myData.user}}</li>
+        <li><span class="fa-li"><i class="fas fa-check"></i></span>{{myData.storage}}</li>
+        <li><span class="fa-li"><i class="fas fa-check"></i></span>{{myData.projects}}</li>
+        <li><span class="fa-li"><i class="fas fa-check"></i></span>{{myData.access}}</li>
+        <li [ngClass]="{'text-muted': !myData.project.available}"><span class="fa-li"><i class="fas fa-times"></i></span>
+          {{myData.project.title}} </li>
+        <li [ngClass]="{'text-muted': !myData.phone.available}"><span class="fa-li"><i class="fas fa-times"></i></span>
+          {{myData.phone.title}}</li>
+        <li [ngClass]="{'text-muted': !myData.subdomain.available}" class = "text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>
+          {{myData.subdomain.title}}</li>
+        <li [ngClass]="{'text-muted': !myData.status.available}"><span class="fa-li"><i class="fas fa-times"></i></span>
+          {{myData.status.title}}</li>
+      </ul>
+      <div class="d-grid">
+        <a href="#" class="btn btn-primary text-uppercase">Button</a>
+      </div>
+    </div>
+</div>
